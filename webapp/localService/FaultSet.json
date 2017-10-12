@@ -1,0 +1,7 @@
+[{
+	"ID": "01",
+	"FaultType": "Bearing Fault"
+}, {
+	"ID": "02",
+	"FaultType": "Machanical"
+}]

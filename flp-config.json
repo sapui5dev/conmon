@@ -1,0 +1,34 @@
+{
+    "application": {
+        "id": "",
+        "title": "DemoBuild",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/webapp",
+        "appUrl": "#DemoBuild-Display",
+        "navigationComponentName": "com.sap.build.standard.fmgConMonWatchList",
+        "intentSemanticObject": "DemoBuild",
+        "intentAction": "Display",
+        "html5ApplicationName": "builddemo",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "6cef0b60-c2d9-4ab1-99f9-4a10116e6824"
+        ],
+        "contentPackages": [
+            "demo_catalog"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "WatchList",
+        "subtitle": "build demo",
+        "searchKeywords": "WatchList,build demo",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}
