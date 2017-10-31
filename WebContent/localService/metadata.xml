@@ -1,0 +1,162 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="15245f587ae456b20e9db5a2" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="15245f587ae456b20e9db5a2_Entities" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="EventItemSet" EntityType="15245f587ae456b20e9db5a2.EventItem" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="EventItemAttachmentAttachment" Association="15245f587ae456b20e9db5a2.EventItemAttachmentAttachment" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="EventItemSet" Role="FromRole_EventItemAttachmentAttachment"/>
+                    <End EntitySet="AttachmentSet" Role="ToRole_EventItemAttachmentAttachment"/>
+                </AssociationSet>
+                <AssociationSet Name="EventItemRecommendedActionsRecommendedActions" Association="15245f587ae456b20e9db5a2.EventItemRecommendedActionsRecommendedActions" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="EventItemSet" Role="FromRole_EventItemRecommendedActionsRecommendedActions"/>
+                    <End EntitySet="RecommendedActionsSet" Role="ToRole_EventItemRecommendedActionsRecommendedActions"/>
+                </AssociationSet>
+                <EntitySet Name="AttachmentSet" EntityType="15245f587ae456b20e9db5a2.Attachment" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="AreaSet" EntityType="15245f587ae456b20e9db5a2.Area" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="EquipIDSet" EntityType="15245f587ae456b20e9db5a2.EquipID" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="StatusSet" EntityType="15245f587ae456b20e9db5a2.Status" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="ConMonTypeSet" EntityType="15245f587ae456b20e9db5a2.ConMonType" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="ComponentTypeSet" EntityType="15245f587ae456b20e9db5a2.ComponentType" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="ComponentIDSet" EntityType="15245f587ae456b20e9db5a2.ComponentID" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="SourceSystemSet" EntityType="15245f587ae456b20e9db5a2.SourceSystem" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="SeveritySet" EntityType="15245f587ae456b20e9db5a2.Severity" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="EventItemCreaetionSet" EntityType="15245f587ae456b20e9db5a2.EventItemCreaetion" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="NotificationListSet" EntityType="15245f587ae456b20e9db5a2.NotificationList" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="RecommendedActionsSet" EntityType="15245f587ae456b20e9db5a2.RecommendedActions" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+            </EntityContainer>
+            <EntityType Name="EventItem">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Area" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Type"/>
+                <Property Name="EquipID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+                <Property Name="ComponentName" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Comment"/>
+                <Property Name="SurveyDate" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="CreationDate"/>
+                <Property Name="ComponentType" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="AssignedTo"/>
+                <Property Name="ConMonType" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Site"/>
+                <Property Name="PreviousSeverity" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Status"/>
+                <Property Name="Severity" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Severity"/>
+                <Property Name="Status" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Status"/>
+                <Property Name="AssetType" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="AssetType"/>
+                <Property Name="SourceSystem" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="SourceSystem"/>
+                <Property Name="FunctionalLocation" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="FunctionalLocation"/>
+                <NavigationProperty Name="Attachment" Relationship="15245f587ae456b20e9db5a2.EventItemAttachmentAttachment" FromRole="FromRole_EventItemAttachmentAttachment" ToRole="ToRole_EventItemAttachmentAttachment"/>
+                <NavigationProperty Name="RecommendedActions" Relationship="15245f587ae456b20e9db5a2.EventItemRecommendedActionsRecommendedActions" FromRole="FromRole_EventItemRecommendedActionsRecommendedActions" ToRole="ToRole_EventItemRecommendedActionsRecommendedActions"/>
+            </EntityType>
+            <Association Name="EventItemAttachmentAttachment">
+                <End Type="15245f587ae456b20e9db5a2.EventItem" Multiplicity="1" Role="FromRole_EventItemAttachmentAttachment"/>
+                <End Type="15245f587ae456b20e9db5a2.Attachment" Multiplicity="*" Role="ToRole_EventItemAttachmentAttachment"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_EventItemAttachmentAttachment">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_EventItemAttachmentAttachment">
+                        <PropertyRef Name="___FK_46d9828fe49299e50d9bb2ee"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="EventItemRecommendedActionsRecommendedActions">
+                <End Type="15245f587ae456b20e9db5a2.EventItem" Multiplicity="1" Role="FromRole_EventItemRecommendedActionsRecommendedActions"/>
+                <End Type="15245f587ae456b20e9db5a2.RecommendedActions" Multiplicity="*" Role="ToRole_EventItemRecommendedActionsRecommendedActions"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_EventItemRecommendedActionsRecommendedActions">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_EventItemRecommendedActionsRecommendedActions">
+                        <PropertyRef Name="___FK_68ad2d8d8adf5de50ea0ba89"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="Attachment">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="___FK_46d9828fe49299e50d9bb2ee" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_46d9828fe49299e50d9bb2ee"/>
+                <Property Name="Image" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Image"/>
+                <Property Name="filename" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Name"/>
+            </EntityType>
+            <EntityType Name="Area">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+            </EntityType>
+            <EntityType Name="EquipID">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+            </EntityType>
+            <EntityType Name="Status">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+            </EntityType>
+            <EntityType Name="ConMonType">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+            </EntityType>
+            <EntityType Name="ComponentType">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+            </EntityType>
+            <EntityType Name="ComponentID">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+            </EntityType>
+            <EntityType Name="SourceSystem">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+            </EntityType>
+            <EntityType Name="Severity">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+            </EntityType>
+            <EntityType Name="EventItemCreaetion">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="ComponentID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ComponentID"/>
+                <Property Name="ComponentType" Type="Edm.String" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:calculated="{&quot;calculation&quot;:&quot;[{\&quot;label\&quot;:\&quot;IF\&quot;,\&quot;name\&quot;:\&quot;if\&quot;,\&quot;type\&quot;:\&quot;condition\&quot;,\&quot;condition\&quot;:[{\&quot;label\&quot;:\&quot;=\&quot;,\&quot;name\&quot;:\&quot;equals\&quot;,\&quot;type\&quot;:\&quot;operator\&quot;,\&quot;left\&quot;:[{\&quot;label\&quot;:\&quot;PROPERTY\&quot;,\&quot;name\&quot;:\&quot;property\&quot;,\&quot;entityName\&quot;:\&quot;EventItemCreaetion\&quot;,\&quot;entityId\&quot;:\&quot;EventItemCreaetion\&quot;,\&quot;navPropName\&quot;:\&quot;\&quot;,\&quot;navPropId\&quot;:\&quot;\&quot;,\&quot;navPropMultiplicity\&quot;:null,\&quot;navPropOp\&quot;:null,\&quot;propertyName\&quot;:\&quot;ComponentID\&quot;,\&quot;propertyId\&quot;:\&quot;ComponentID\&quot;,\&quot;type\&quot;:\&quot;property\&quot;,\&quot;propertyType\&quot;:\&quot;String\&quot;,\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:1,\&quot;computedType\&quot;:\&quot;string\&quot;}],\&quot;right\&quot;:[{\&quot;label\&quot;:\&quot;VALUE\&quot;,\&quot;name\&quot;:\&quot;value\&quot;,\&quot;type\&quot;:\&quot;value\&quot;,\&quot;value\&quot;:\&quot;Pulley #2 LHS\&quot;,\&quot;isNewLine\&quot;:true,\&quot;id\&quot;:3,\&quot;computedType\&quot;:\&quot;string\&quot;}],\&quot;displayLabel\&quot;:\&quot;=\&quot;,\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:2,\&quot;computedType\&quot;:\&quot;boolean\&quot;}],\&quot;then\&quot;:[{\&quot;label\&quot;:\&quot;VALUE\&quot;,\&quot;name\&quot;:\&quot;value\&quot;,\&quot;type\&quot;:\&quot;value\&quot;,\&quot;value\&quot;:\&quot;Pulley\&quot;,\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:4,\&quot;computedType\&quot;:\&quot;string\&quot;}],\&quot;else\&quot;:[{\&quot;label\&quot;:\&quot;VALUE\&quot;,\&quot;name\&quot;:\&quot;value\&quot;,\&quot;type\&quot;:\&quot;value\&quot;,\&quot;value\&quot;:\&quot;Gearbox\&quot;,\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:5,\&quot;computedType\&quot;:\&quot;string\&quot;}],\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:0,\&quot;computedType\&quot;:\&quot;string\&quot;}]&quot;,&quot;inputProperties&quot;:[{&quot;navPropId&quot;:&quot;&quot;,&quot;entityId&quot;:&quot;EventItemCreaetion&quot;,&quot;propertyId&quot;:&quot;ComponentID&quot;,&quot;_id&quot;:&quot;59ddaeab1772d26769f62361&quot;}]}" sap:label="ComponentType"/>
+            </EntityType>
+            <EntityType Name="NotificationList">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="NotificationNum" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="NotificationNum"/>
+                <Property Name="WorkOrderNum" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="WorkOrderNum"/>
+            </EntityType>
+            <EntityType Name="RecommendedActions">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+                <Property Name="___FK_68ad2d8d8adf5de50ea0ba89" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_68ad2d8d8adf5de50ea0ba89"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

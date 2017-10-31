@@ -1,0 +1,171 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="fmg.conmon.controllers.EventList" 
+     xmlns:m="sap.m" xmlns:core="sap.ui.core">
+    <m:Page showHeader="true" title="Manage ConMon Events" showFooter="true" showNavButton="false">
+        <m:content>
+            <m:Bar design="Auto">
+                <m:contentLeft>
+                    <m:MultiComboBox value="Con Mon Type" placeholder="Con Mon Type" editable="true" enabled="true" width="200px" valueState="None" maxWidth="100%" items="{/ConMonTypeSet}">
+                        <m:items>
+                            <core:Item text="{Description}" enabled="true"/>
+                        </m:items>
+                    </m:MultiComboBox>
+                    <m:MultiComboBox value="Area" placeholder="Area" editable="true" enabled="true" width="123px" valueState="None" maxWidth="100%" items="{/AreaSet}">
+                        <m:items>
+                            <core:Item text="{Description}" enabled="true"/>
+                        </m:items>
+                    </m:MultiComboBox>
+                    <m:MultiComboBox value="Route" placeholder="Route" editable="true" enabled="true" width="150px" valueState="None" maxWidth="100%">
+                        <m:items>
+                            <core:Item text="Item" enabled="true"/>
+                        </m:items>
+                    </m:MultiComboBox>
+                    <m:MultiComboBox value="Component Type" placeholder="Component Type" editable="true" enabled="true" width="200px" valueState="None" maxWidth="100%" items="{/ComponentTypeSet}">
+                        <m:items>
+                            <core:Item text="{Description}" enabled="true"/>
+                        </m:items>
+                    </m:MultiComboBox>
+                    <m:MultiComboBox value="Status" placeholder="Status" editable="true" enabled="true" width="150px" valueState="None" maxWidth="100%" items="{/StatusSet}">
+                        <m:items>
+                            <core:Item text="{Description}" enabled="true"/>
+                        </m:items>
+                    </m:MultiComboBox>
+                    <m:DatePicker placeholder="From" value="From" enabled="true" visible="true" width="200px" displayFormat="MMM dd, yyyy"/>
+                    <m:DatePicker placeholder="To" value="To" enabled="true" visible="true" width="200px" displayFormat="MMM dd, yyyy"/>
+                </m:contentLeft>
+                <m:contentMiddle/>
+                <m:contentRight/>
+            </m:Bar>
+            <m:Table id="sap_Worklist_Page_0-content-sap_m_IconTabBar-1490617229785-items-sap_m_IconTabFilter-1-content-build_simple_Table-1507518857004" width="100%" noDataText="No data" mode="None" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="true" items="{/EventItemSet}">
+                <m:infoToolbar>
+                    <m:Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                        <m:content>
+                            <m:Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:content>
+                    </m:Toolbar>
+                </m:infoToolbar>
+                <m:headerToolbar/>
+                <m:columns>
+                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <m:header>
+                            <m:Text text="Survey Date" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader" mergeDuplicates="false">
+                        <m:header>
+                            <m:Text text="Area" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader" mergeDuplicates="false">
+                        <m:header>
+                            <m:Text text="Equip ID" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <m:header>
+                            <m:Text text="Component Name" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <m:header>
+                            <m:Text text="Component Type" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                    <m:Column width="120px" hAlign="Center" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                        <m:header>
+                            <m:Text text="Con Mon Type" width="100px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <m:header>
+                            <m:Text text="Previous Severity" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <m:header>
+                            <m:Text text="Severity" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <m:header>
+                            <m:Text text="Status" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                    <m:Column width="55px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <m:header>
+                            <m:Text text="" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                    <m:Column width="130px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <m:header>
+                            <m:Text text="" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                    <m:Column width="110px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <m:header>
+                            <m:Text text="" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                </m:columns>
+                <m:items>
+                    <m:ColumnListItem type="Active">
+                        <m:cells>
+                            <m:Text text="{path: 'SurveyDate', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+                            <m:Text text="{Area}" width="auto" maxLines="3" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+                            <m:Text text="{EquipID}" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+                            <m:Text text="{ComponentName}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                            <m:Text text="{ComponentType}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                            <m:Text text="{ConMonType}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                            <m:Text text="{PreviousSeverity}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                            <m:Text text="{Severity}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                            <m:Text text="{Status}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                            <m:Button text="Edit" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress10"/>
+                            <m:Button text="Quick Validation" type="Emphasized" iconFirst="false" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                            <m:Button text="Carry Forward" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress11"/>
+                        </m:cells>
+                    </m:ColumnListItem>
+                </m:items>
+            </m:Table>
+            <m:Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+                <m:content>
+                    <m:ToolbarSpacer width=""/>
+                    <m:Button text="SAP" type="Transparent" icon="sap-icon://trend-up" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <m:Button text="Add Manual Event" type="Transparent" icon="sap-icon://add" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress12"/>
+                    <m:Button text="Set Filter" type="Transparent" icon="sap-icon://filter" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress13"/>
+                    <m:Button text="Search" type="Transparent" icon="sap-icon://search" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress14"/>
+                    <m:Button text="Refresh" type="Transparent" icon="sap-icon://refresh" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </m:content>
+                <m:tooltip/>
+            </m:Toolbar>
+        </m:content>
+        <m:footer>
+            <m:Bar design="Auto">
+                <m:contentLeft/>
+                <m:contentMiddle/>
+                <m:contentRight>
+                    <m:Button text="SAP" type="Default" icon="sap-icon://trend-up" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <m:Button text="Add Manual Event" type="Default" icon="sap-icon://add" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress15"/>
+                    <m:Button text="Set Filter" type="Default" icon="sap-icon://filter" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress16"/>
+                    <m:Button text="Search" type="Default" icon="sap-icon://search" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <m:Button text="Refresh" type="Default" icon="sap-icon://refresh" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </m:contentRight>
+            </m:Bar>
+        </m:footer>
+        <m:headerContent>
+            <m:Button text="" type="Default" icon="sap-icon://sys-help" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress17"/>
+        </m:headerContent>
+        <m:subHeader/>
+        <m:customHeader/>
+    </m:Page>
+</mvc:View>

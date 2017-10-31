@@ -1,0 +1,137 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+<ViewSettingsDialog>
+    
+    <filterItems>
+        
+        <ViewSettingsCustomItem text="SurveyDate" filterCount="{parts:[{path:'/SurveyDate/vValueLT'}, {path:'/SurveyDate/vValueGT'}], formatter:'.filterCountFormatter'}">
+            <customControl>
+                <l:VerticalLayout width="100%">
+                    <Toolbar>
+                        <Label width="25%" text="Before" class="sapUiSmallMarginBegin"/>
+                        <DatePicker width="33%" value="{path: '/SurveyDate/vValueLT'}" valueFormat="yyyy-MM-dd" displayFormat="yyyy-MM-dd"/>
+                    </Toolbar>
+                    <Toolbar>
+                        <Label width="25%" text="After" class="sapUiSmallMarginBegin"/>
+                        <DatePicker width="33%" value="{path: '/SurveyDate/vValueGT'}" valueFormat="yyyy-MM-dd" displayFormat="yyyy-MM-dd"/>
+                    </Toolbar>
+                </l:VerticalLayout>
+            </customControl>
+        </ViewSettingsCustomItem>
+        
+        
+        <ViewSettingsFilterItem text="Area" key="Area"
+                                items="{path: '/Area'}">
+            <items>
+                <ViewSettingsItem key="String___Area___{}" text="{}"></ViewSettingsItem>
+            </items>
+        </ViewSettingsFilterItem>
+        
+        
+        <ViewSettingsFilterItem text="EquipID" key="EquipID"
+                                items="{path: '/EquipID'}">
+            <items>
+                <ViewSettingsItem key="String___EquipID___{}" text="{}"></ViewSettingsItem>
+            </items>
+        </ViewSettingsFilterItem>
+        
+        
+        <ViewSettingsFilterItem text="ComponentName" key="ComponentName"
+                                items="{path: '/ComponentName'}">
+            <items>
+                <ViewSettingsItem key="String___ComponentName___{}" text="{}"></ViewSettingsItem>
+            </items>
+        </ViewSettingsFilterItem>
+        
+        
+        <ViewSettingsFilterItem text="ComponentType" key="ComponentType"
+                                items="{path: '/ComponentType'}">
+            <items>
+                <ViewSettingsItem key="String___ComponentType___{}" text="{}"></ViewSettingsItem>
+            </items>
+        </ViewSettingsFilterItem>
+        
+        
+        <ViewSettingsFilterItem text="ConMonType" key="ConMonType"
+                                items="{path: '/ConMonType'}">
+            <items>
+                <ViewSettingsItem key="String___ConMonType___{}" text="{}"></ViewSettingsItem>
+            </items>
+        </ViewSettingsFilterItem>
+        
+        
+        <ViewSettingsFilterItem text="PreviousSeverity" key="PreviousSeverity"
+                                items="{path: '/PreviousSeverity'}">
+            <items>
+                <ViewSettingsItem key="String___PreviousSeverity___{}" text="{}"></ViewSettingsItem>
+            </items>
+        </ViewSettingsFilterItem>
+        
+        
+        <ViewSettingsFilterItem text="Severity" key="Severity"
+                                items="{path: '/Severity'}">
+            <items>
+                <ViewSettingsItem key="String___Severity___{}" text="{}"></ViewSettingsItem>
+            </items>
+        </ViewSettingsFilterItem>
+        
+        
+        <ViewSettingsFilterItem text="Status" key="Status"
+                                items="{path: '/Status'}">
+            <items>
+                <ViewSettingsItem key="String___Status___{}" text="{}"></ViewSettingsItem>
+            </items>
+        </ViewSettingsFilterItem>
+        
+        
+    </filterItems>
+    
+
+    
+    <sortItems>
+        
+        <ViewSettingsItem text="SurveyDate" key="SurveyDate" />
+        
+        <ViewSettingsItem text="Area" key="Area" />
+        
+        <ViewSettingsItem text="EquipID" key="EquipID" />
+        
+        <ViewSettingsItem text="ComponentName" key="ComponentName" />
+        
+        <ViewSettingsItem text="ComponentType" key="ComponentType" />
+        
+        <ViewSettingsItem text="ConMonType" key="ConMonType" />
+        
+        <ViewSettingsItem text="PreviousSeverity" key="PreviousSeverity" />
+        
+        <ViewSettingsItem text="Severity" key="Severity" />
+        
+        <ViewSettingsItem text="Status" key="Status" />
+        
+    </sortItems>
+    
+
+    
+    <groupItems>
+        
+        <ViewSettingsItem text="SurveyDate" key="SurveyDate" />
+        
+        <ViewSettingsItem text="Area" key="Area" />
+        
+        <ViewSettingsItem text="EquipID" key="EquipID" />
+        
+        <ViewSettingsItem text="ComponentName" key="ComponentName" />
+        
+        <ViewSettingsItem text="ComponentType" key="ComponentType" />
+        
+        <ViewSettingsItem text="ConMonType" key="ConMonType" />
+        
+        <ViewSettingsItem text="PreviousSeverity" key="PreviousSeverity" />
+        
+        <ViewSettingsItem text="Severity" key="Severity" />
+        
+        <ViewSettingsItem text="Status" key="Status" />
+        
+    </groupItems>
+    
+</ViewSettingsDialog>
+</core:FragmentDefinition>

@@ -1,0 +1,28 @@
+<!-- <core:FragmentDefinition -->
+<!--     xmlns="sap.m" -->
+<!--     xmlns:core="sap.ui.core"> -->
+<!--     <BusyDialog id="testbusydialog"/> -->
+<!-- </core:FragmentDefinition> -->
+
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog title="{i18n>appointmentNum}" contentWidth="26rem" class="lunachPadDialog" id="appointmentNumDialog">
+		<FlexBox alignItems="Center" justifyContent="Start">
+			<Text text="{i18n>dialogAppointmentText1-1}"></Text>
+			<Text text="{AppointmentModel>/currentDate}"></Text>
+			<Text text="{i18n>dialogAppointmentText1-2}:"></Text>
+			<!-- <Input class="appointmentInput" id="inputOfAppointmentDialog" type="Number" value="0" liveChange="inputOfAppointmentDialogLiveChange"></Input> -->
+			<Input class="appointmentInput" id="inputOfAppointmentDialog" 
+					type="Number" value="{AppointmentDialogModel>/inputValue}" 
+					valueState="{AppointmentDialogModel>/inputStatus}"
+					liveChange="inputOfAppointmentDialogLiveChange"></Input> 
+			<Text text="{i18n>dialogAppointmentText2}"></Text>
+		</FlexBox>
+		<Text text="{i18n>dialogAppointmentWarning}" class="warningText"></Text>
+		<buttons>
+			<Button text="{i18n>confirmButton1}" enabled="false" 
+				id="confirmButtonOfAppointmentDialogLiveChange" press="editActivityNum" />
+			<Button text="{i18n>cannelButton1}" press="closeDialogAppointment" />
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

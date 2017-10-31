@@ -1,0 +1,13 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="fmg.conmon.controller.dialog_1" xmlns:m="sap.m">
+    <m:Dialog horizontalScrolling="true" showHeader="true" state="None" stretch="false" title="About" type="Standard" verticalScrolling="true">
+        <m:content>
+            <m:Button text="OK" type="Default" iconFirst="true" width="94.00000000px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress8"/>
+            <m:Text text="Use this application to view the latest set of condition monitoring events filtered by equipment type as chosen by each user." width="auto" maxLines="4" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+        </m:content>
+        <m:beginButton/>
+        <m:buttons/>
+        <m:customHeader/>
+        <m:endButton/>
+        <m:subHeader/>
+    </m:Dialog>
+</mvc:View>
